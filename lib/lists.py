@@ -1,65 +1,65 @@
 # CREATING A LIST
-#list()
 my_list = [1, 2, 3]
 print(f"Created list: {my_list}")
 
+# Append
+my_list.append(3)
+print(f"Appended 3 to list: {my_list}")
+
+# Insert at index
+my_list.insert(1, 10)
+print(f"Inserted 10 at index 1: {my_list}")
+
+# Extend with another list
+my_list.extend([4, 5])
+print(f"Extended list with [4, 5]: {my_list}")
+
+# Create a new list using +
+new_list = my_list + [6, 7]
+print(f"New list using + [6, 7]: {new_list}")
+
 
 # READING A LIST
-#Read first element
-first_element = my_list[0]
-print(f"First element: {first_element}")
-#Read last element
-last_element = my_list[-1]
-print(f"Last element: {last_element}")
-#Read at a specific index
-indexed_element = my_list[2]
-print(f"Element at index 2: {indexed_element}")
-#slicing
-sliced_list = my_list[1:4]
-print(f"sliced list: {sliced_list}")
-#count
-count_3 = my_list.count(3)
-print(f"3 appears {count_3} times")
+print(f"First element: {my_list[0]}")
+print(f"Last element: {my_list[-1]}")
+print(f"Element at index 2: {my_list[2]}")
+print(f"Sliced list [1:4]: {my_list[1:4]}")
+print(f"Count of 3 in list: {my_list.count(3)}")
+
 
 # UPDATING A LIST
-#changing list elements using index
+# Modify element
 my_list[1] = 99
-print("After updating index 1 to 99:", my_list)
-#adding an element at the end of a list
-my_list.append(3)
-print(f"appended list: {my_list}")
-#adding an element at at a specific index of a list
-my_list.insert(1, 10)
-print(f"insert element at index 1: {my_list}")
-# adding elements using extend
-my_list.extend([4, 5])
-print(f"extended list: {my_list}")
-# adding using +
-new_list = my_list + [6,7]
-print(f"new list using +: {new_list}")
-#sort
-sorted_list = my_list.sort()
-print(f"sorted list: {sorted_list}")
-#reverse
-reversed_list = my_list.reverse()
-print(f"reversed list: {reversed_list}")
-# using *
+print(f"Updated index 1 to 99: {my_list}")
+
+# Sort 
+my_list.sort()
+print(f"Sorted list: {my_list}")
+
+# Reverse (in-place)
+my_list.reverse()
+print(f"Reversed list: {my_list}")
+
+# Repeat list elements
 repeated_list = [1] * 3
-print(f"repeated list: {repeated_list}")
+print(f"Repeated [1] three times: {repeated_list}")
 
 
-
-
-# DELETING
+# DELETING ELEMENTS
 # Remove last item
-my_list.pop()  
-# pop with index 
-my_list.pop(1) 
-# remove     
+my_list.pop()
+
+# Remove item at index 1
+my_list.pop(1)
+
+# Remove first occurrence of 99
 my_list.remove(99)
-#del
-del my_list[2]      
-print("After deletions:", my_list)
-#clear
+
+# Delete item at index 2
+del my_list[2]
+
+print(f"List after deletions: {my_list}")
+
+# Clear all elements
 my_list.clear()
-print("After clearing the list:", my_list)
+print(f"List after clearing: {my_list}")
